@@ -18,6 +18,10 @@ app.use(cors());
 app.use("/api/users", userRoutes);
 // app.use("/api/products", productRoutes);
 
+app.get("/",(req ,res)=>{
+  res.status(200).send("Logind--")
+});
+
 
 app.use((err, req, res, next) => {
   console.error(err.stack);
